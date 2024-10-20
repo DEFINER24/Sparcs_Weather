@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    int Move = 0;
+    public int Move = 0;
     public GameObject targetPosition;
     Vector3 velo = Vector3.zero; //참조속도
     
     void Update(){
         if(Move == 1){
             transform.position = Vector3.SmoothDamp(
-                transform.position, targetPosition.transform.position, ref velo, 1f);
+                transform.position, targetPosition.transform.position, ref velo, 1f);            
             transform.rotation = Quaternion.Slerp(transform.rotation, targetPosition.transform.rotation, 0.005f);
         }
         if(Vector3.Distance(transform.position, targetPosition.transform.position) < 1f){
@@ -32,15 +32,12 @@ public class MoveCamera : MonoBehaviour
     [SerializeField]
     float _RotateSpeed = -1f;
     [SerializeField]
-    float _dragSpeed = 0.1f;
-    [SerializeField]
     float _inputSpeed = 1;
 
     private void LateUpdate()
     {
         if(Move == 2){
             CameraZoom();
-            CameraDrag();
             CameraRotate();
             CameraInput();
         }
@@ -70,19 +67,6 @@ public class MoveCamera : MonoBehaviour
             return;
 
         transform.position += transform.forward * _zoomDirection * _zoomSpeed;
-    }
-
-
-    void CameraDrag()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            float posX = Input.GetAxis("Mouse X");
-            float posZ = Input.GetAxis("Mouse Y");
-
-            Quaternion v3Rotation = Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
-            transform.position += v3Rotation * new Vector3(posX * -_dragSpeed, 0, posZ * -_dragSpeed); // 플레이어의 위치에서 카메라가 바라보는 방향에 벡터값을 적용한 상대 좌표를 차감합니다.
-        }
     }
 
     float totalRun = 1.0f;

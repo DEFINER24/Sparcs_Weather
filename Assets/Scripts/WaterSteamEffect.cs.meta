@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 1d23ab201482849449194b6e91893cf6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - RainEffect: {instanceID: 0}
+  - RainEffect1: {instanceID: 0}
+  - RainEffect2: {instanceID: 0}
+  - RainEffect3: {instanceID: 0}
+  - RainEffect4: {instanceID: 0}
+  - steamEffect: {instanceID: 0}
+  - steamEffect1: {instanceID: 0}
+  - steamEffect2: {instanceID: 0}
+  - steamEffect3: {instanceID: 0}
+  - steamEffect4: {instanceID: 0}
+  - steamEffect5: {instanceID: 0}
+  - steamEffect6: {instanceID: 0}
+  - steamEffect7: {instanceID: 0}
+  - steamEffect8: {instanceID: 0}
+  - steamEffect9: {instanceID: 0}
+  - steamEffect10: {instanceID: 0}
+  - steamEffect11: {instanceID: 0}
+  - steamEffect12: {instanceID: 0}
+  - steamEffect13: {instanceID: 0}
+  - cloud1: {instanceID: 0}
+  - cloud2: {instanceID: 0}
+  - cloud3: {instanceID: 0}
+  - cloud4: {instanceID: 0}
+  - cloud5: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
